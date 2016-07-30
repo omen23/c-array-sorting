@@ -17,12 +17,12 @@ else if (*(int*)a == *(int*)b) return 0;
 else err(errno, "The qsort comparison function encountered an error.\n");
 }
 
-void swap(int* v1, int* v2)
+void xor_swap(int* v1, int* v2)
 {
   if (v1 != v2)
       *v1^=*v2^(*v2=*v1);
 }
-#define swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
+#define xor_swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
 void selection_sort(int a[], int n)
 {
@@ -42,7 +42,7 @@ void selection_sort(int a[], int n)
     
     if (min != j)
     {      
-      swap(&a[min], &a[j]);
+      xor_swap(&a[min], &a[j]);
     }
   }
 }
@@ -57,7 +57,7 @@ void bubble_sort(int a[], int n)
     {
       if (a[d] > a[d+1])
       {
-        swap(&a[d], &a[d+1]);
+        xor_swap(&a[d], &a[d+1]);
       }
     }
   }
