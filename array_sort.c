@@ -3,12 +3,12 @@
  * free of charge - atleast please mention me
  * hope this helps anyone
  * contact: https://twitter.com/oMeN2351
- */
- 
+ */ 
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
 #include <err.h>
+
 int compar_fn(const void* a, const void* b) 
 {
 if (*(int*)a > *(int*)b) return 1;
