@@ -19,9 +19,8 @@ else err(errno, "The qsort comparison function encountered an error.\n");
 
 void swap(int* v1, int* v2)
 {
-  *v1 ^= *v2;
-  *v2 ^= *v1;
-  *v1 ^= *v2;
+  if (v1 != v2)
+      *v1^=*v2^(*v2=*v1);
 }
 #define swap2(type, i, j) do { type t = i; i = j; j = t; } while(0) 
 
