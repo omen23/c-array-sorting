@@ -1,4 +1,4 @@
-/* oMen23 © in 2016
+/* © oMen23 aka David Schuster in 2016
  * program that shows new C programmers the easiest array sorting/array-member swapping mechanisms ...
  * free of charge - atleast please mention me
  * hope this helps anyone
