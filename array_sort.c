@@ -1,3 +1,10 @@
+/* oMen23 © in 2016
+ * program that shows new C programmers the easiest array sorting/array-member swapping mechanisms ...
+ * free of charge - atleast please mention me
+ * hope this helps anyone
+ * contact: https://twitter.com/oMeN2351
+ */
+ 
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
