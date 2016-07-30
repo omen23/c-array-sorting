@@ -22,7 +22,7 @@ void swap(int* v1, int* v2)
   if (v1 != v2)
       *v1^=*v2^(*v2=*v1);
 }
-#define swap2(type, i, j) do { type t = i; i = j; j = t; } while(0) 
+#define swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
 void selection_sort(int a[], int n)
 {
