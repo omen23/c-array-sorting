@@ -73,7 +73,7 @@ int
 main(void)
 {
   int a[] = { 26, 9, 88, 12, 55, 99, 12324, 111, 43, 42, 41, 88, 102 , 55, 66, 77, 88, 123, 10000, 103, 105 };
-  size_t array_size = (sizeof a/ sizeof a[0]);
+  size_t array_size = (sizeof a / sizeof a[0]);
 
   display_array(a, array_size);
 
