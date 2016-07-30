@@ -42,7 +42,7 @@ void selection_sort(int a[], int n)
     
     if (min != j)
     {      
-      xor_swap(&a[min], &a[j]);
+      xor_swap(&a[j], &a[min]);
     }
   }
 }
