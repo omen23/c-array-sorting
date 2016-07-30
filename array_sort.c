@@ -12,9 +12,10 @@
 int compar_fn(const void* a, const void* b) 
 {
 if (*(int*)a > *(int*)b) return 1;
-else if (*(int*)a < *(int*)b) return -1;
-else if (*(int*)a == *(int*)b) return 0;
-else err(errno, "The qsort comparison function encountered an error.\n");
+if (*(int*)a == *(int*)b) return 0;
+if (*(int*)a < *(int*)b) return -1;
+
+err(errno, "The qsort comparison function encountered an error.\n");
 }
 
 void xor_swap(int* v1, int* v2)
