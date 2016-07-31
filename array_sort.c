@@ -72,8 +72,7 @@ void heap_sort(int a[], int n)
                 c++;
             
             if (a[root] < a[c] && c < j)            
-                xor_swap(&a[root], &a[c]);
-            
+                xor_swap(&a[root], &a[c]);            
             
             root = c;
         } while (c < j);
