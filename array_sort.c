@@ -26,8 +26,7 @@ void xor_swap(int* v1, int* v2)
 
 void merge_sort(int a[], int n)
 {
-   int b[n];
-   
+   int b[n];   
    
    void _merge(int low, int mid, int high)
    {
@@ -60,8 +59,7 @@ void merge_sort(int a[], int n)
            _sort(mid+1, high);
            _merge(low, mid, high);
        } else return;
-   }   
-
+   }
    
    _sort(0, n);
 }
