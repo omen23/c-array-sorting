@@ -48,7 +48,10 @@ void selection_sort(int a[], int n)
   }
 }
 
+
 void gnome_sort(int a[], int n)
+{
+    void gsort(int a[], int n)
 {
     int pos = n - 1;
     while (pos > 0 && a[pos-1] > a[pos])
@@ -57,10 +60,9 @@ void gnome_sort(int a[], int n)
         pos--;        
     }
 }
-void opti_gnome_sort(int a[], int n)
-{    
+    
     for (int pos = 1; pos <= n; pos++)
-        gnome_sort(a, pos);
+        gsort(a, pos);
 }
 
 
@@ -94,8 +96,8 @@ main(void)
 
   display_array(a, array_size);
 
-  puts("calling opti_gnome_sort(...)");
-  opti_gnome_sort(a, array_size);
+  puts("calling gnome_sort(...)");
+  gnome_sort(a, array_size);
 //   bubble_sort(a, array_size);
 //   selection_sort(a, array_size);
 //   qsort((void*)a, array_size, sizeof(int), compar_fn);
