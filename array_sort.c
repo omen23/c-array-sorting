@@ -25,6 +25,23 @@ void xor_swap(int* v1, int* v2)
 }
 #define xor_swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
+
+void insertion_sort(int a[], int n)
+{
+    int c, d;
+    
+    for (c = 1; c <= n - 1; c++)
+    {
+        d = c;
+        
+        while (d > 0 && a[d] < a[d-1])
+        {
+            xor_swap(&a[d], &a[d-1]);
+            d--;
+        }
+    }
+}
+
 void heap_sort(int a[], int n)
 {
     int i, j, c, root, temp;
@@ -132,8 +149,9 @@ main(void)
 
   display_array(a, array_size);
 
-  puts("calling heap_sort(...)");
-  heap_sort(a, array_size);
+  puts("calling insertion_sort(...)");
+  insertion_sort(a, array_size);
+//   heap_sort(a, array_size);
 //   gnome_sort(a, array_size);
 //   bubble_sort(a, array_size);
 //   selection_sort(a, array_size);
