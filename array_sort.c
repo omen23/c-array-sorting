@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 int compar_fn(const void* a, const void* b) 
 {
 if (*(int*)a > *(int*)b) return 1;
@@ -29,7 +28,7 @@ void insertion_sort(int a[], int n)
 {
     int c, d;
     
-    for (c = 1; c < n; c++)
+    for (c = 1; c < n; c++) // c <= n-1 ??
     {
         d = c;
         
