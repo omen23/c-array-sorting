@@ -110,8 +110,7 @@ void gnome_sort(int a[], int n)
             xor_swap2(a[pos-1], a[pos]);
             pos--;        
         }
-    }
-    
+    }    
     for (int pos = 1; pos <= n; pos++)
         _gsort(a, pos);
 }
