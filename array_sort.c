@@ -62,11 +62,7 @@ void merge_sort(int a[], int n)
    }
    
    _sort(0, n);
-}
-               
-        
-    
-    
+}   
 
 void insertion_sort(int a[], int n)
 {
