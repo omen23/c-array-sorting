@@ -35,7 +35,7 @@ void insertion_sort(int a[], int n)
         
         while (d > 0 && a[d] < a[d-1])
         {
-            xor_swap(&a[d], &a[d-1]);
+            xor_swap2(a[d], a[d-1]);
             d--;
         }
     }
@@ -52,7 +52,7 @@ void heap_sort(int a[], int n)
         {
             root = (c - 1) / 2;
             if (a[root] < a[c])            
-                xor_swap(&a[root], &a[c]);
+                xor_swap2(a[root], a[c]);
                         
             c = root;
         } while (c != 0);
@@ -60,7 +60,7 @@ void heap_sort(int a[], int n)
     
     for (j = (n - 1); j >= 0; j--)
     {
-        xor_swap(&a[0], &a[j]);
+        xor_swap2(a[0], a[j]);
         
         root = 0;
         
@@ -71,7 +71,7 @@ void heap_sort(int a[], int n)
                 c++;
             
             if (a[root] < a[c] && c < j)            
-                xor_swap(&a[root], &a[c]);            
+                xor_swap2(a[root], a[c]);            
             
             root = c;
         } while (c < j);
@@ -96,7 +96,7 @@ void selection_sort(int a[], int n)
     
     if (min != j)
     {      
-      xor_swap(&a[j], &a[min]);
+      xor_swap2(a[j], a[min]);
     }
   }
 }
@@ -108,7 +108,7 @@ void gnome_sort(int a[], int n)
         int pos = n - 1;
         while (pos > 0 && a[pos-1] > a[pos])
         {
-            xor_swap(&a[pos-1], &a[pos]);
+            xor_swap2(a[pos-1], a[pos]);
             pos--;        
         }
     }
@@ -127,7 +127,7 @@ void bubble_sort(int a[], int n)
     {
       if (a[d] > a[d+1])
       {
-        xor_swap(&a[d], &a[d+1]);
+        xor_swap2(a[d], a[d+1]);
       }
     }
   }
