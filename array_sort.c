@@ -29,7 +29,7 @@ void insertion_sort(int a[], int n)
 {
     int c, d;
     
-    for (c = 1; c <= n - 1; c++)
+    for (c = 1; c < n; c++)
     {
         d = c;
         
