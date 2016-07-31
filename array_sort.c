@@ -24,6 +24,52 @@ void xor_swap(int* v1, int* v2)
 
 #define xor_swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
+void merge_sort(int a[], int n)
+{
+   int b[n];
+   
+   
+   void _merge(int low, int mid, int high)
+   {
+       int l1, l2, i;
+       
+       for (l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++)
+       {
+           if (a[l1] <= a[l2])
+               b[i] = a[l1++];
+           else
+               b[i] = a[l2++];
+       }
+       while (l1 <= mid)
+           b[i++] = a[l1++];
+       
+       while (l2 <= high)
+           b[i++] = a[l2++];
+       
+       for (i = low; i <= high; i++)
+           a[i] = b[i];
+   }
+
+   void _sort(int low, int high)
+   {
+       int mid;
+       if (low < high)
+       {
+           mid = (low + high) / 2;
+           _sort(low, mid);
+           _sort(mid+1, high);
+           _merge(low, mid, high);
+       } else return;
+   }   
+
+   
+   _sort(0, n);
+}
+               
+        
+    
+    
+
 void insertion_sort(int a[], int n)
 {
     int c, d;
@@ -144,8 +190,9 @@ main(void)
 
   display_array(a, array_size);
 
-  puts("calling insertion_sort(...)");
-  insertion_sort(a, array_size); 
+  puts("calling merge_sort(...)");
+  merge_sort(a, array_size);
+//   insertion_sort(a, array_size); 
 //   heap_sort(a, array_size);
 //   gnome_sort(a, array_size);
 //   bubble_sort(a, array_size);
