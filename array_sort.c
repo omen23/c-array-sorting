@@ -132,7 +132,7 @@ void bubble_sort(int a[], int n)
 
 void display_array(int a[], int n) 
 {
-  for (int x  = 0; x < n; x++)
+  for (int x = 0; x < n; x++)
     printf("a[%d] = %d\n", x, a[x]);
 }
 
@@ -145,7 +145,7 @@ main(void)
   display_array(a, array_size);
 
   puts("calling insertion_sort(...)");
-  insertion_sort(a, array_size);
+  insertion_sort(a, array_size); 
 //   heap_sort(a, array_size);
 //   gnome_sort(a, array_size);
 //   bubble_sort(a, array_size);
