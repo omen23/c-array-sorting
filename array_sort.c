@@ -43,7 +43,7 @@ void insertion_sort(int a[], int n)
 
 void heap_sort(int a[], int n)
 {
-    int i, j, c, root, temp;
+    int i, j, c, root;
     
     for (i = 1; i < n; i++)
     {
