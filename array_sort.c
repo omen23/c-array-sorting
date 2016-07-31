@@ -6,16 +6,15 @@
  */ 
 #include <stdlib.h>
 #include <stdio.h>
-#include <errno.h>
-#include <err.h>
+
 
 int compar_fn(const void* a, const void* b) 
 {
 if (*(int*)a > *(int*)b) return 1;
 if (*(int*)a == *(int*)b) return 0;
 if (*(int*)a < *(int*)b) return -1;
-
-err(errno, "The qsort comparison function encountered an error.\n");
+printf("problem in %s at %s:%d\n", __FUNCTION__, __FILE__, __LINE__ );
+return 0;
 }
 
 void xor_swap(int* v1, int* v2)
