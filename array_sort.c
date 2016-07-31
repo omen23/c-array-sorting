@@ -59,8 +59,7 @@ void heap_sort(int a[], int n)
     
     for (j = (n - 1); j >= 0; j--)
     {
-        xor_swap2(a[0], a[j]);
-        
+        xor_swap2(a[0], a[j]);        
         root = 0;
         
         do
