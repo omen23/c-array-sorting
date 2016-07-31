@@ -47,14 +47,14 @@ void selection_sort(int a[], int n)
     }
   }
 }
+
 void gnome_sort(int a[], int n)
 {
     int pos = n - 1;
     while (pos > 0 && a[pos-1] > a[pos])
     {
         xor_swap(&a[pos-1], &a[pos]);
-        pos--;
-        
+        pos--;        
     }
 }
 void opti_gnome_sort(int a[], int n)
