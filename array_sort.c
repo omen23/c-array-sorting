@@ -103,7 +103,7 @@ void selection_sort(int a[], int n)
 
 void gnome_sort(int a[], int n)
 {
-    void gsort(int a[], int n)
+    void _gsort(int a[], int n)
     {
         int pos = n - 1;
         while (pos > 0 && a[pos-1] > a[pos])
@@ -114,7 +114,7 @@ void gnome_sort(int a[], int n)
     }
     
     for (int pos = 1; pos <= n; pos++)
-        gsort(a, pos);
+        _gsort(a, pos);
 }
 
 void bubble_sort(int a[], int n)
