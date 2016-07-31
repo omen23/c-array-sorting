@@ -13,7 +13,7 @@ int compar_fn(const void* a, const void* b)
 if (*(int*)a > *(int*)b) return 1;
 if (*(int*)a == *(int*)b) return 0;
 if (*(int*)a < *(int*)b) return -1;
-printf("problem in function %s in file %s:%d\n", __FUNCTION__, __FILE__, __LINE__ );
+printf("problem in function %s in file %s:%d\n", __PRETTY_FUNCTION__, __FILE__, __LINE__ );
 return 0;
 }
 
