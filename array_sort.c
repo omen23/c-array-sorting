@@ -191,7 +191,7 @@ main(void)
 //   gnome_sort(a, array_size);
 //   bubble_sort(a, array_size);
 //   selection_sort(a, array_size);
-//   qsort((void*)a, array_size, sizeof(int), compar_fn);
+//   qsort(a, array_size, sizeof(int), compar_fn);
 
   display_array(a, array_size);
 
