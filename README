@@ -23,7 +23,7 @@ a[17] = 123
 a[18] = 10000
 a[19] = 103
 a[20] = 105
-calling selection_sort(...)
+calling merge_sort(...)
 a[0] = 9
 a[1] = 12
 a[2] = 26
@@ -45,3 +45,5 @@ a[17] = 111
 a[18] = 123
 a[19] = 10000
 a[20] = 12324
+
+try and recompile with every algorithm, valgrind checked (=
