@@ -1,6 +1,5 @@
 # c-array-sorting
 
-
 test-run:
 a[0] = 26
 a[1] = 9
