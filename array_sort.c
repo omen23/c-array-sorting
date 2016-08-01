@@ -24,9 +24,6 @@ void xor_swap(int* v1, int* v2)
 
 #define xor_swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
-/* this feels so hackish - but it actually works and should be correct ... 
- * spot any errors? -> point them out - contact is in the description above
- */
 void merge_sort(int a[], int n)
 {
    int b[n];   
@@ -64,7 +61,7 @@ void merge_sort(int a[], int n)
        } else return;
    }
    
-   _sort(0, n);
+   _sort(0, n-1);
 }   
 
 void insertion_sort(int a[], int n)
