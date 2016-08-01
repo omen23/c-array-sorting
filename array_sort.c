@@ -112,7 +112,7 @@ void heap_sort(int a[], int n)
                 xor_swap2(a[root], a[c]);            
             
             root = c;
-        } while (c < j);
+        } while (c < j-1);
     }
 }    
 
