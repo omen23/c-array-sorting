@@ -156,8 +156,7 @@ void gnome_sort(int a[], int n)
 }
 
 void bubble_sort(int a[], int n)
-{
-  
+{  
   int c, d;
   
   for (c = 0; c < (n - 1); c++)
