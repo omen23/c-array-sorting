@@ -1,4 +1,4 @@
-/* © oMeN23 aka David Schuster in 2016
+/* © oMeN23 aka David Schuster in 2016-2017
  * program that shows new C programmers the easiest array sorting/array-member swapping mechanisms ...
  * free of charge - atleast please mention me
  * hope this helps anyone
@@ -9,6 +9,12 @@
 
 int compar_fn(const void* a, const void* b) 
 {
+  static int toggle = 0;
+  if (!toggle)
+  {
+    puts("calling qsort with compar_fn(...)");
+    toggle = 1;
+  }
   if (*(int*)a > *(int*)b) return 1;
   if (*(int*)a == *(int*)b) return 0;
   if (*(int*)a < *(int*)b) return -1;
@@ -25,7 +31,8 @@ void xor_swap(int* v1, int* v2)
 #define xor_swap2(a, b) ((&(a) == &(b)) ? (a) : ((a)^=(b),(b)^=(a),(a)^=(b))) 
 
 void merge_sort(int a[], int n)
-{    
+{
+  puts("calling merge_sort(...)");    
   int b[n];   
   
   void _merge(int low, int mid, int high)
@@ -66,6 +73,7 @@ void merge_sort(int a[], int n)
 
 void insertion_sort(int a[], int n)
 {
+  puts("calling insertion_sort(...)");
   int c, d;
   
   for (c = 1; c < n; c++)
@@ -82,6 +90,7 @@ void insertion_sort(int a[], int n)
 
 void heap_sort(int a[], int n)
 {
+  puts("calling heap_sort(...)");
   int i, j, c, root;
   
   for (i = 1; i < n; i++)
@@ -118,6 +127,7 @@ void heap_sort(int a[], int n)
 
 void selection_sort(int a[], int n)
 {
+  puts("calling selection_sort(...)");
   int i, j;
   
   for (j = 0; j < (n - 1); j++)
@@ -140,7 +150,8 @@ void selection_sort(int a[], int n)
 }
 
 void gnome_sort(int a[], int n)
-{    
+{
+  puts("calling gnome_sort(...)");
   void _gsort(int a[], int n)
   {
     int pos = n - 1;
@@ -157,6 +168,7 @@ void gnome_sort(int a[], int n)
 
 void bubble_sort(int a[], int n)
 {  
+  puts("calling bubble_sort(...)");
   int c, d;
   
   for (c = 0; c < (n - 1); c++)
@@ -184,8 +196,7 @@ main(void)
   size_t array_size = (sizeof a / sizeof a[0]);
   
   display_array(a, array_size);
-  
-  puts("calling merge_sort(...)");
+
   merge_sort(a, array_size);
 //   insertion_sort(a, array_size); 
 //   heap_sort(a, array_size);
