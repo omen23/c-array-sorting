@@ -1,5 +1,10 @@
 # c-array-sorting
-
+/* © oMeN23 aka David Schuster in 2016-2017
+ * program that shows new C programmers the easiest array sorting/array-member swapping mechanisms ...
+ * free of charge - atleast please mention me
+ * hope this helps anyone
+ * contact: https://twitter.com/oMeN2351
+ */ 
 test-run:
 a[0] = 26
 a[1] = 9
